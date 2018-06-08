@@ -1,2 +1,2 @@
 # scripting
-Collection of scripts
+Collection of bash shell and powershell scripts
