@@ -4,7 +4,7 @@
 USER=YOURUSERNAME
 OUTPUT=/home/$USER/SSHLog/$(date '+%b%d'SSHSuccess.txt)
 DATE=$(date -d '2 min ago' '+%b %d %R')
-if cat /var/log/auth.log | grep "$DATE" | grep "session opened for user remote"
+if cat /var/log/auth.log | grep "$DATE" | grep "session opened for user $USER"
 then
         rm $OUTPUT
         cat /var/log/auth.log | grep "$DATE" | grep "session opened for user" >> "$OUTPUT"
